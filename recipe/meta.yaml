@@ -1,5 +1,5 @@
 {% set name = "xarray-sentinel" %}
-{% set version = "0.4.2" %}
+{% set version = "0.9.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xarray-sentinel-{{ version }}.tar.gz
-  sha256: eed441553d52a3f07286d972e089c0c2be1e2506e6caa1d2697b5c5d0a503e75
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a9f33d0d5f8cb354562b98829069757ad34d3d9a23e1387c41994b66e25f54d3
 
 build:
   number: 1
@@ -18,13 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools_scm
   run:
-    - attrs
-    - dask-core
     - fsspec
-    - python >=3.7
+    - python >=3.8
     - rioxarray
     - xarray >=0.18.0
     - xmlschema
