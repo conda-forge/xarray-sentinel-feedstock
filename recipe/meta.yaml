@@ -1,5 +1,5 @@
 {% set name = "xarray-sentinel" %}
-{% set version = "0.9.5" %}
+{% set version = "0.9.6" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d9d3c8fd8c9856768edfff9568d25a92a06e5840833077660af279d2def0b8a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6067627bd53dc091c7e4078504959578c4ef96e605b1b411cf2c124a3f241630
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
